@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+  <form method="post" action=""> <!-- the action being an empty string means that the post method will send the update to the same url-->
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit"/>
+  </form>
+</div>
+
+{% endblock content %}
